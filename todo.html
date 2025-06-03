@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Todo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 12px;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fa-trash {
+            color: #ff4444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestionnaire de Todo</h1>
+    
+    <div class="input-group">
+        <label for="name">Nom de la tâche:</label>
+        <input type="text" id="name" placeholder="Entrez le nom de la tâche">
+    </div>
+    
+    <div class="input-group">
+        <label for="content">Description:</label>
+        <input type="text" id="content" placeholder="Entrez la description">
+    </div>
+    
+    <button id="addButton">Ajouter une tâche</button>
+    
+    <ol id="todolist"></ol>
+    <script src="js/todo.js"></script>
+</body>
+</html>

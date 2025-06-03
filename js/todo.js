@@ -5,7 +5,7 @@ class Todo {
     }
    createTodoItem(){
     const li=document.createElement("li");
-    li.innerHTML='$(this.name) : $(this.content)';
+    li.innerHTML=`${this.name} : ${this.content}`;
     return li;
    }
 }
@@ -16,7 +16,8 @@ class Todos{
         this.showTodos();
     }
     showTodos(){
-        this.ol.innerHTML((todo)=>{
+        this.ol.innerHTML="";
+        this.todos.forEach((todo)=>{
             const newTodo=todo.createTodoItem();
             const i=document.createElement("i");
             i.classList.add("fa");
@@ -40,7 +41,7 @@ class Todos{
     }
 }
 const todos =new Todos();
-const disableButton=(button,...dependencies)=>{
+const disableButton=(button, ...dependencies)=>{
     button.disabled=false;
     dependencies.forEach((dependency)=>{
         if(!dependency.value.trim().length){
